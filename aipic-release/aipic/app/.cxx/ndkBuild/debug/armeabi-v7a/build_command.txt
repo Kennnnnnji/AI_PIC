@@ -1,14 +1,14 @@
-Executable : C:\Users\12071\AppData\Local\Android\Sdk\ndk-bundle\ndk-build.cmd
+Executable : C:\Users\kenwo\AppData\Local\Android\Sdk\ndk\20.1.5948944\ndk-build.cmd
 arguments : 
 NDK_PROJECT_PATH=null
-APP_BUILD_SCRIPT=D:\code\BUAA\android_development\phimpme-android-development-mod\app\src\main\jni\Android.mk
-NDK_APPLICATION_MK=D:\code\BUAA\android_development\phimpme-android-development-mod\app\src\main\jni\Application.mk
+APP_BUILD_SCRIPT=D:\CODES\git\AI-Pic\AI_PIC\aipic-release\aipic\app\src\main\jni\Android.mk
+NDK_APPLICATION_MK=D:\CODES\git\AI-Pic\AI_PIC\aipic-release\aipic\app\src\main\jni\Application.mk
 APP_ABI=armeabi-v7a
 NDK_ALL_ABIS=armeabi-v7a
 NDK_DEBUG=1
 APP_PLATFORM=android-21
-NDK_OUT=D:/code/BUAA/android_development/phimpme-android-development-mod/app/build/intermediates/ndkBuild/debug/obj
-NDK_LIBS_OUT=D:\code\BUAA\android_development\phimpme-android-development-mod\app\build\intermediates\ndkBuild\debug\lib
+NDK_OUT=D:/CODES/git/AI-Pic/AI_PIC/aipic-release/aipic/app/build/intermediates/ndkBuild/debug/obj
+NDK_LIBS_OUT=D:\CODES\git\AI-Pic\AI_PIC\aipic-release\aipic\app\build\intermediates\ndkBuild\debug\lib
 APP_SHORT_COMMANDS=false
 LOCAL_SHORT_COMMANDS=false
 -B
