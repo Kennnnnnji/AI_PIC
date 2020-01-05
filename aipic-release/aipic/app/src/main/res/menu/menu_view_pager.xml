@@ -1,0 +1,54 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="buaa.android.aipic.gallery.activities.SingleMediaActivity">
+
+    <group android:id="@+id/only_photos_options">
+        <item
+            android:id="@+id/action_use_as"
+            android:title="@string/use_as"
+            app:showAsAction="never" />
+    </group>
+
+    <group android:id="@+id/on_internal_storage">
+        <item
+            android:id="@+id/action_copy"
+            app:showAsAction="never"
+            android:title="复制"/>
+        <item
+            android:id="@+id/action_move"
+            app:showAsAction="never"
+            android:title="移动"/>
+
+        <item
+            android:id="@+id/action_cover"
+            app:showAsAction="never"
+            android:title="设置相册封面"/>
+    </group>
+
+    <item
+        android:id="@+id/slide_show"
+        android:title="@string/slideshow"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/print"
+        app:showAsAction="never"
+        android:title="@string/print"/>
+    <item
+        android:id="@+id/pdf"
+        app:showAsAction="never"
+        android:title="转换为PDF"/>
+    <item
+        android:id="@+id/rename_photo"
+        app:showAsAction="never"
+        android:title="@string/Rename"/>
+    <item
+        android:id="@+id/action_description"
+        android:title="@string/description"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_settings"
+        android:title="@string/settings"
+        app:showAsAction="never" />
+    <!-- End Albums Stuff -->
+</menu>

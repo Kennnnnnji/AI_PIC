@@ -1,0 +1,7 @@
+11.12
+1. in \app\src\main\res\values\strings.xml
+	set <string name="sticker">Transfer</string>
+	from Sticker to Transfer
+2. 编辑选项layout在 ...\res\layout\fragment_editor_main.xml
+3. sticker的icon在
+...\res\drawable\ic_sticker.xml

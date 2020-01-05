@@ -1,0 +1,51 @@
+./main/AndroidManifest.xml:            android:name=".share.imgur.ImgurAuthActivity"
+./main/java/buaa/android/aipic/accounts/AccountActivity.java:import buaa.android.aipic.share.imgur.ImgurAuthActivity;
+./main/java/buaa/android/aipic/accounts/AccountViewModel.java:  // to save imgur account details
+./main/java/buaa/android/aipic/share/imgur/ImgurAuthActivity.java:package buaa.android.aipic.share.imgur;
+./main/java/buaa/android/aipic/share/imgur/ImgurAuthActivity.java:  static BasicCallBack imgurCallBack;
+./main/java/buaa/android/aipic/share/imgur/ImgurAuthActivity.java:    imgurCallBack = basicCallBack;
+./main/java/buaa/android/aipic/share/imgur/ImgurAuthActivity.java:    WebView imgurWebView = findViewById(R.id.twitterLoginWebView);
+./main/java/buaa/android/aipic/share/imgur/ImgurAuthActivity.java:    imgurWebView.setBackgroundColor(Color.TRANSPARENT);
+./main/java/buaa/android/aipic/share/imgur/ImgurAuthActivity.java:    imgurWebView.loadUrl(IMGUR_LOGIN_URL);
+./main/java/buaa/android/aipic/share/imgur/ImgurAuthActivity.java:    imgurWebView.getSettings().setJavaScriptEnabled(true);
+./main/java/buaa/android/aipic/share/imgur/ImgurAuthActivity.java:    imgurWebView.setWebViewClient(
+./main/java/buaa/android/aipic/share/imgur/ImgurAuthActivity.java:      imgurCallBack.callBack(Constants.SUCCESS, bundle);
+./main/java/buaa/android/aipic/share/imgur/ImgurPicUploadReq.java:package buaa.android.aipic.share.imgur;
+./main/java/buaa/android/aipic/share/imgur/ImgurPicUploadResp.java:package buaa.android.aipic.share.imgur;
+./main/java/buaa/android/aipic/share/SharingActivity.java:import buaa.android.aipic.share.imgur.ImgurPicUploadReq;
+./main/java/buaa/android/aipic/share/SharingActivity.java:import buaa.android.aipic.share.imgur.ImgurPicUploadResp;
+./main/java/buaa/android/aipic/share/SharingActivity.java:  private static final String IMGUR_BASE_URL = "https://api.imgur.com/3/";
+./main/java/buaa/android/aipic/share/SharingActivity.java:  String boardID, imgurAuth = null, imgurString = null;
+./main/java/buaa/android/aipic/share/SharingActivity.java:  private ImgurApi imgurApiInterface;
+./main/java/buaa/android/aipic/share/SharingActivity.java:    if (imgurApiInterface == null) {
+./main/java/buaa/android/aipic/share/SharingActivity.java:      imgurApiInterface = RetrofitClient.getRetrofitClient(IMGUR_BASE_URL).create(ImgurApi.class);
+./main/java/buaa/android/aipic/share/SharingActivity.java:    query.equalTo("name", getString(R.string.imgur));
+./main/java/buaa/android/aipic/share/SharingActivity.java:      imgurAuth = IMGUR_HEADER_USER + " " + result.get(0).getToken();
+./main/java/buaa/android/aipic/share/SharingActivity.java:        SharingActivity.this, dialogBuilder, R.string.choose, R.string.imgur_select_mode, null);
+./main/java/buaa/android/aipic/share/SharingActivity.java:            getString(R.string.posting_on_imgur),
+./main/java/buaa/android/aipic/share/SharingActivity.java:    ImgurPicUploadReq imgurPicUpload = new ImgurPicUploadReq();
+./main/java/buaa/android/aipic/share/SharingActivity.java:    imgurPicUpload.setImage(imageString);
+./main/java/buaa/android/aipic/share/SharingActivity.java:      imgurPicUpload.setCaption(caption);
+./main/java/buaa/android/aipic/share/SharingActivity.java:    if (isPersonal && imgurAuth != null) {
+./main/java/buaa/android/aipic/share/SharingActivity.java:      authorization = imgurAuth;
+./main/java/buaa/android/aipic/share/SharingActivity.java:    imgurApiInterface
+./main/java/buaa/android/aipic/share/SharingActivity.java:        .uploadImageToImgur(authorization, imgurPicUpload)
+./main/java/buaa/android/aipic/share/SharingActivity.java:                  ImgurPicUploadResp imgurPicUploadResp = response.body();
+./main/java/buaa/android/aipic/share/SharingActivity.java:                  boolean success = imgurPicUploadResp.isSuccess();
+./main/java/buaa/android/aipic/share/SharingActivity.java:                    final String url = imgurPicUploadResp.getData().getLink();
+./main/java/buaa/android/aipic/share/SharingActivity.java:                      imgurString = getString(R.string.upload_personal) + "\n" + url;
+./main/java/buaa/android/aipic/share/SharingActivity.java:                      imgurString = getString(R.string.upload_anonymous) + "\n" + url;
+./main/java/buaa/android/aipic/share/SharingActivity.java:                        R.string.imgur_uplaoded_dialog_title,
+./main/java/buaa/android/aipic/share/SharingActivity.java:                        imgurString);
+./main/java/buaa/android/aipic/share/SharingActivity.java:                    SnackBarHandler.create(parent, getString(R.string.error_on_imgur)).show();
+./main/java/buaa/android/aipic/utilities/Constants.java:      "https://api.imgur.com/oauth2/authorize?client_id="
+./main/java/buaa/android/aipic/utilities/ImgurApi.java:import buaa.android.aipic.share.imgur.ImgurPicUploadReq;
+./main/java/buaa/android/aipic/utilities/ImgurApi.java:import buaa.android.aipic.share.imgur.ImgurPicUploadResp;
+./main/res/values/colors.xml:    <color name="imgur_color">#000000</color>
+./main/res/values/colors.xml:    <color name="imgur_color_darktheme">#fcfcfcfc</color>
+./main/res/values/strings.xml:    <string name="imgur"> </string>
+./main/res/values/strings.xml:    <string name="posting_on_imgur">Uploading on Imgur</string>
+./main/res/values/strings.xml:    <string name="error_on_imgur">Error on uploading on Imgur</string>
+./main/res/values/strings.xml:    <string name="uploaded_on_imgur">Image uploaded on Imgur successfully and link copied.</string>
+./main/res/values/strings.xml:    <string name="imgur_uplaoded_dialog_title">Image uploaded on Imgur.</string>
+./main/res/values/strings.xml:    <string name="imgur_select_mode">How do you want to upload Image on Imgur ?</string>
